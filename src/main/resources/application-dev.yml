@@ -1,0 +1,26 @@
+server:
+  servlet:
+    context-path: /v1
+  port: 8090
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/travel_management_application
+    username: root
+    # password: password
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      "javax.persistence.validation.mode": none
+      hibernate.dialect: org.hibernate.dialect.MySQLDialect
+      hibernate.format_sql: false
+
+logging:
+  level:
+    org.springframework: WARN
+    org.springframework.security: WARN
+    org.hibernate: WARN
+    org.apache: WARN
